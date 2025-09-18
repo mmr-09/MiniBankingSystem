@@ -51,12 +51,12 @@
 
 ## 3. Một số màn hình giao diện
 <div align="center">
-  <img src="images/login.png" alt="Giao diện đăng nhập" width="500"/>
+  <img src="Img/z7026642277867_223485aaa6ec8287e07631040f687cf7.jpg" alt="Giao diện đăng nhập" width="500"/>
   <p><em>Hình 1: Giao diện đăng nhập/đăng ký</em></p>
 </div>
 
 <div align="center">
-  <img src="images/admin.png" alt="Giao diện admin" width="500"/>
+  <img src="Img/z7026642278187_3b883beb4e4719c72ae491bafc783dcc.jpg" alt="Giao diện admin" width="500"/>
   <p><em>Hình 2: Giao diện quản lý tài khoản (Admin)</em></p>
 </div>
 
