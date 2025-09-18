@@ -62,12 +62,12 @@
 
 <div align="center">
   <img src="Img/z7026642279964_173420c4256f94bb85f24b206c1939a3.jpg" alt="Giao diện customer" width="500"/>
-  <p><em>Hình 2: Giao diện tài khoản khách hàng(Customer)</em></p>
+  <p><em>Hình 3: Giao diện tài khoản khách hàng(Customer)</em></p>
 </div>
 
 <div align="center">
   <img src="Img/z7026642279999_b6f12632417ebe48ea998a8e73369cd7.jpg" alt="Giao diện khách hàng" width="500"/>
-  <p><em>Hình 3: Giao diện giao dịch (Customer)</em></p>
+  <p><em>Hình 4: Giao diện giao dịch (Customer)</em></p>
 </div>
 
 ## 4. Cài đặt & Sử dụng
