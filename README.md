@@ -72,7 +72,7 @@
 - **IDE**: Eclipse, IntelliJ IDEA, hoặc chạy trực tiếp qua terminal.
 ### Cấu trúc cơ sở dữ liệu
 Tạo cơ sở dữ liệu và các bảng bằng tệp `bank_system.sql`:
-## 5. Thành viên & Thông tin
+## 5. Thông tin liên hệ
 Sinh viên: Nguyễn Tiến Thái  
 Lớp: CNTT 16-01  
 Email: tienthai0915@gmail.com  
