@@ -66,11 +66,9 @@
 </div>
 
 <div align="center">
-  <img src="images/customer.png" alt="Giao diện khách hàng" width="500"/>
+  <img src="Img/z7026642279999_b6f12632417ebe48ea998a8e73369cd7.jpg" alt="Giao diện khách hàng" width="500"/>
   <p><em>Hình 3: Giao diện giao dịch (Customer)</em></p>
 </div>
-
-> **Lưu ý**: Thay thế các ảnh trên bằng ảnh chụp màn hình thực tế của ứng dụng.
 
 ## 4. Cài đặt & Sử dụng
 ### Yêu cầu môi trường
