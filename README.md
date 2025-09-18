@@ -61,6 +61,11 @@
 </div>
 
 <div align="center">
+  <img src="Img/z7026642279964_173420c4256f94bb85f24b206c1939a3.jpg" alt="Giao diện customer" width="500"/>
+  <p><em>Hình 2: Giao diện tài khoản khách hàng(Customer)</em></p>
+</div>
+
+<div align="center">
   <img src="images/customer.png" alt="Giao diện khách hàng" width="500"/>
   <p><em>Hình 3: Giao diện giao dịch (Customer)</em></p>
 </div>
