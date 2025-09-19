@@ -76,8 +76,42 @@
 - **MySQL**: MySQL Server 8.0 trở lên.
 - **IDE**: Eclipse, IntelliJ IDEA, hoặc chạy trực tiếp qua terminal.
 ### Cấu trúc cơ sở dữ liệu
-Tạo cơ sở dữ liệu và các bảng bằng tệp `bank_system.sql`
-## 5. Thông tin liên hệ
+Tạo cơ sở dữ liệu và các bảng bằng tệp `bank_system.sql`  
+
+
+CREATE DATABASE bank_system;  
+USE bank_system;  
+
+CREATE TABLE users (  
+    username VARCHAR(50) PRIMARY KEY,  
+    password VARCHAR(50) NOT NULL,  
+    role VARCHAR(20) NOT NULL CHECK (role IN ('Customer', 'Admin'))  
+);  
+
+CREATE TABLE accounts (  
+    account_number VARCHAR(50) PRIMARY KEY,  
+    owner_name VARCHAR(100) NOT NULL,  
+    username VARCHAR(50) NOT NULL,  
+    balance DOUBLE NOT NULL DEFAULT 0.0,  
+    FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE  
+);  
+
+CREATE TABLE transactions (  
+    id INT AUTO_INCREMENT PRIMARY KEY,  
+    account_number VARCHAR(50) NOT NULL,  
+    type VARCHAR(50) NOT NULL,  
+    amount DOUBLE NOT NULL,  
+    description VARCHAR(255),  
+    transaction_date DATETIME NOT NULL,  
+    FOREIGN KEY (account_number) REFERENCES accounts(account_number) ON DELETE CASCADE  
+);
+
+-- Thêm tài khoản admin  
+INSERT INTO users (username, password, role) VALUES ('admin', 'admin123', 'Admin');  
+
+### Cách triển khai
+
+## 5. Thông tin liên hệ 
 Sinh viên: Nguyễn Tiến Thái  
 Lớp: CNTT 16-01  
 Email: tienthai0915@gmail.com  
