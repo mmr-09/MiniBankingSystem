@@ -78,7 +78,7 @@
 ### Cấu trúc cơ sở dữ liệu
 Tạo cơ sở dữ liệu và các bảng bằng tệp `bank_system.sql`  
 
-
+'''sql   
 CREATE DATABASE bank_system;  
 USE bank_system;  
 
