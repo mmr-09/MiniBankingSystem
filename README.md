@@ -82,7 +82,7 @@ Tạo cơ sở dữ liệu và các bảng bằng tệp `bank_system.sql`
 
 Dưới đây là script SQL để khởi tạo database `bank_system` với dữ liệu mẫu:
 
-### 1. Tạo Cơ sở dữ liệu
+#### 1. Tạo Cơ sở dữ liệu
 
 ```sql
 -- Tạo database
@@ -141,13 +141,13 @@ SELECT * FROM users;
 SELECT * FROM accounts;
 SELECT * FROM transactions;
 ```
-### 2. Cách triển khai
+#### 2. Cách triển khai
 Clone repository về máy   
 Import cơ sở dữ liệu bằng file SQL ở trên   
 Chạy server RMI   
 Chạy client để kết nối   
 
-### 3. Công nghệ sử dụng
+#### 3. Công nghệ sử dụng
 Java RMI   
 MySQL   
 JDBC   
