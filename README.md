@@ -51,22 +51,22 @@
 
 ## 3. Một số màn hình giao diện
 <div align="center">
-  <img src="Img/z7026642277867_223485aaa6ec8287e07631040f687cf7.jpg" alt="Giao diện đăng nhập" width="500"/>
+  <img src="Img/z7071634115248_759c077feb8cb766712dc12a88552708.jpg" alt="Giao diện đăng nhập" width="500"/>
   <p><em>Hình 1: Giao diện đăng nhập/đăng ký</em></p>
 </div>
 
 <div align="center">
-  <img src="Img/z7026642278187_3b883beb4e4719c72ae491bafc783dcc.jpg" alt="Giao diện admin" width="500"/>
+  <img src="Img/z7071634126561_09dad7dd94818d79130595d5d16ac74a.jpg" alt="Giao diện admin" width="500"/>
   <p><em>Hình 2: Giao diện quản lý tài khoản (Admin)</em></p>
 </div>
 
 <div align="center">
-  <img src="Img/z7026642279964_173420c4256f94bb85f24b206c1939a3.jpg" alt="Giao diện customer" width="500"/>
+  <img src="Img/z7071634126562_53302ba5d46a4656e3ba406f122aa06b.jpg" alt="Giao diện customer" width="500"/>
   <p><em>Hình 3: Giao diện tài khoản khách hàng(Customer)</em></p>
 </div>
 
 <div align="center">
-  <img src="Img/z7026642279999_b6f12632417ebe48ea998a8e73369cd7.jpg" alt="Giao diện khách hàng" width="500"/>
+  <img src="Img/z7071634126564_0fca2440a2c21862a9658e4f0ed57daf.jpg" alt="Giao diện khách hàng" width="500"/>
   <p><em>Hình 4: Giao diện giao dịch (Customer)</em></p>
 </div>
 
