@@ -78,38 +78,79 @@
 ### Cấu trúc cơ sở dữ liệu
 Tạo cơ sở dữ liệu và các bảng bằng tệp `bank_system.sql`  
 
-'''sql   
-CREATE DATABASE bank_system;  
-USE bank_system;  
+# Bank System Database Schema
 
-CREATE TABLE users (  
-    username VARCHAR(50) PRIMARY KEY,  
-    password VARCHAR(50) NOT NULL,  
-    role VARCHAR(20) NOT NULL CHECK (role IN ('Customer', 'Admin'))  
-);  
+Dưới đây là script SQL để khởi tạo database `bank_system` với dữ liệu mẫu:
 
-CREATE TABLE accounts (  
-    account_number VARCHAR(50) PRIMARY KEY,  
-    owner_name VARCHAR(100) NOT NULL,  
-    username VARCHAR(50) NOT NULL,  
-    balance DOUBLE NOT NULL DEFAULT 0.0,  
-    FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE  
-);  
+### 1. Tạo Cơ sở dữ liệu
 
-CREATE TABLE transactions (  
-    id INT AUTO_INCREMENT PRIMARY KEY,  
-    account_number VARCHAR(50) NOT NULL,  
-    type VARCHAR(50) NOT NULL,  
-    amount DOUBLE NOT NULL,  
-    description VARCHAR(255),  
-    transaction_date DATETIME NOT NULL,  
-    FOREIGN KEY (account_number) REFERENCES accounts(account_number) ON DELETE CASCADE  
+```sql
+-- Tạo database
+CREATE DATABASE IF NOT EXISTS bank_system;
+USE bank_system;
+
+-- Xóa bảng cũ nếu có (để tránh lỗi khi chạy lại nhiều lần)
+DROP TABLE IF EXISTS transactions;
+DROP TABLE IF EXISTS accounts;
+DROP TABLE IF EXISTS users;
+
+-- Bảng users: cho phép role là 'Customer' hoặc 'Admin'
+CREATE TABLE users (
+    username VARCHAR(50) PRIMARY KEY,
+    password VARCHAR(50) NOT NULL,
+    role VARCHAR(20) NOT NULL CHECK (role IN ('Customer', 'Admin'))
 );
 
--- Thêm tài khoản admin  
-INSERT INTO users (username, password, role) VALUES ('admin', 'admin123', 'Admin');  
+-- Bảng accounts
+CREATE TABLE accounts (
+    account_number VARCHAR(50) PRIMARY KEY,
+    owner_name VARCHAR(100) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    balance DOUBLE NOT NULL DEFAULT 0.0,
+    FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE
+);
 
-### Cách triển khai
+-- Bảng transactions
+CREATE TABLE transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    account_number VARCHAR(50) NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    amount DOUBLE NOT NULL,
+    description VARCHAR(255),
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (account_number) REFERENCES accounts(account_number) ON DELETE CASCADE
+);
+
+-- Thêm tài khoản mẫu
+INSERT INTO users (username, password, role) VALUES ('customer1', 'cust123', 'Customer');
+INSERT INTO users (username, password, role) VALUES ('customer2', 'cust456', 'Customer');
+INSERT INTO users (username, password, role) VALUES ('admin', 'admin123', 'Admin');
+
+INSERT INTO accounts (account_number, owner_name, username, balance) 
+VALUES ('12345', 'Nguyen Van A', 'customer1', 1000.0);
+INSERT INTO accounts (account_number, owner_name, username, balance) 
+VALUES ('67890', 'Tran Thi B', 'customer2', 500.0);
+
+INSERT INTO transactions (account_number, type, amount, description, created_at) 
+VALUES ('12345', 'Deposit', 1000.0, 'Nạp tiền thông thường', NOW());
+INSERT INTO transactions (account_number, type, amount, description, created_at) 
+VALUES ('67890', 'Deposit', 500.0, 'Nạp tiền thông thường', NOW());
+
+-- Kiểm tra dữ liệu
+SELECT * FROM users;
+SELECT * FROM accounts;
+SELECT * FROM transactions;
+```
+### 2. Cách triển khai
+Clone repository về máy   
+Import cơ sở dữ liệu bằng file SQL ở trên   
+Chạy server RMI   
+Chạy client để kết nối   
+
+### 3. Công nghệ sử dụng
+Java RMI   
+MySQL   
+JDBC   
 
 ## 5. Thông tin liên hệ 
 Sinh viên: Nguyễn Tiến Thái  
